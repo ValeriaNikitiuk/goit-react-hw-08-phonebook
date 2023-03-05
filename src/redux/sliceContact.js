@@ -1,11 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {addContact,deleteContact,fetchContact} from '../redux/operations'
 
-const initialState = {
-  items: [],
-  isLoading: false,
-  error: null,
-}
 
 const onReject = (state, action) => {
   state.isLoading = false;
@@ -13,7 +8,11 @@ const onReject = (state, action) => {
 }
 const contatsSlice = createSlice({
     name: 'contacts',
-     initialState,
+  initialState: {
+    items: [],
+    isLoading: false,
+    error: null,
+  },
  
   extraReducers: {     
     [fetchContact.pending](state) {
@@ -35,6 +34,7 @@ const contatsSlice = createSlice({
       state.items.push(action.payload);
     },
     [addContact.rejected]: onReject,
+
     [deleteContact.pending](state) {
       state.isLoading = true;
     },

@@ -12,6 +12,10 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    if (isNaN(Number(number))) {
+      alert('The number must be a number!');
+      return;
+    }
     const contact = { name, number };
     dispatch(addContact(contact));
     setName('');
