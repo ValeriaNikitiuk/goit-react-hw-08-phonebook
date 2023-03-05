@@ -23,6 +23,6 @@ export const ContactsRemove = ({ name, number, id }) => {
 ContactsRemove.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  number: PropTypes.string,
   deleteContact: PropTypes.func,
 };

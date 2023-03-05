@@ -2,10 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import {addContact,deleteContact,fetchContact} from '../redux/operations'
 
 
-const onReject = (state, action) => {
-  state.isLoading = false;
-  state.error = action.payload
-}
+
 const contatsSlice = createSlice({
     name: 'contacts',
   initialState: {
@@ -17,26 +14,37 @@ const contatsSlice = createSlice({
   extraReducers: {     
     [fetchContact.pending](state) {
       state.isLoading = true;
+      state.error = null;
     },
     [fetchContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.items = action.payload;
     },
-    [fetchContact.rejected]: onReject,
+    [fetchContact.rejected](state, action) {
+      state.isLoading = false;
+      state.error = action.payload;
+
+    },
 
     [addContact.pending](state) {
       state.isLoading = true;
+          state.error = null;
     },
     [addContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.items.push(action.payload);
     },
-    [addContact.rejected]: onReject,
+    [addContact.rejected](state, action) {
+      state.isLoading = false;
+      state.error = action.payload;
+
+    },
 
     [deleteContact.pending](state) {
       state.isLoading = true;
+      state.error = null;
     },
     [deleteContact.fulfilled](state, action) {
       state.isLoading = false;
@@ -46,9 +54,12 @@ const contatsSlice = createSlice({
       );
       state.items.splice(index, 1);
     },
-     [deleteContact.rejected]: onReject,
+    [deleteContact.rejected](state, action) {
+      state.isLoading = false;
+      state.error = action.payload;
 
-    },
+    }
+}
 })
 
 export const  contactsReducer = contatsSlice.reducer;
