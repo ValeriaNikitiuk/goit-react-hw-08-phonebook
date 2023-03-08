@@ -20,7 +20,7 @@ const ContactForm = () => {
     const existingContact = contacts.find(contact => contact.name === name);
     if (existingContact) {
       alert(
-        `Contact with name ${name} already exists. Please enter a different name.`
+        `Contact with name ${name} already exists. Please enter a new name.`
       );
       return;
     }
