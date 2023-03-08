@@ -2,11 +2,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from '../../redux/operations';
 import s from './ContactForm.module.css';
 import { useState } from 'react';
-import { selectIsLoading } from '../../redux/selectors';
+import { selectIsLoading, selectContacts } from '../../redux/selectors';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
   const loading = useSelector(selectIsLoading);
+  const contacts = useSelector(selectContacts);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -16,15 +17,17 @@ const ContactForm = () => {
       alert('The number must be a number!');
       return;
     }
+    const existingContact = contacts.find(contact => contact.name === name);
+    if (existingContact) {
+      alert(
+        `Contact with name ${name} already exists. Please enter a different name.`
+      );
+      return;
+    }
     const contact = { name, number };
     dispatch(addContact(contact));
     setName('');
     setNumber('');
-
-    if (!name || !number) {
-      alert('Please fill in all the fields!');
-      return false;
-    }
   };
 
   const handleInputChange = e => {
