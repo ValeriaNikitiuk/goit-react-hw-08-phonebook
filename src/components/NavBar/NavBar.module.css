@@ -1,0 +1,8 @@
+.link {
+    display: inline-block;
+    color: black;
+}
+
+:global(.active) {
+    font-weight: bold;
+}
