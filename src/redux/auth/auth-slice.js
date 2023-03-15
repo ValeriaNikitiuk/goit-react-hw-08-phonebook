@@ -11,28 +11,38 @@ const initialState = {
   isLoggedIn: false,
   isRefreshing: false,
 };
-
+ // я ь зробив ось так
 const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {},
   builder: (builder) => {
+    //REGISTeR
     builder
       .addCase(register.fulfilled, (state, action) => {
         state.user = action.payload.user;
         state.token = action.payload.token;
         state.isLoggedIn = true;
-      })
+      });
+    
+    //LOGIN
+    builder
       .addCase(logIn.fulfilled, (state, action) => {
         state.user = action.payload.user;
         state.token = action.payload.token;
         state.isLoggedIn = true;
-      })
+      });
+    
+    //LOGOUT
+    builder
       .addCase(logOut.fulfilled, (state) => {
         state.user = { name: null, email: null };
         state.token = null;
         state.isLoggedIn = false;
-      })
+      });
+    
+    //REFRESH USER!
+      builder
       .addCase(refreshUser.pending, (state) => {
         state.isRefreshing = true;
       })
@@ -43,6 +53,7 @@ const authSlice = createSlice({
       })
       .addCase(refreshUser.rejected, (state) => {
         state.isRefreshing = false;
+        state.token = null
       });
   },
 });
