@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[711],{711:function(e,o,n){n.r(o),n.d(o,{default:function(){return t}});n(791);var r=n(184);function t(){return(0,r.jsx)("div",{children:(0,r.jsx)("h1",{children:"Hi friend,Welcome to your phonebook!"})})}}}]);
+//# sourceMappingURL=711.2ceb4c9c.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/711.2ceb4c9c.chunk.js","mappings":"6MAEe,SAASA,IACtB,OACE,0BACE,kEAGL,C","sources":["pages/HomePage/Home.jsx"],"sourcesContent":["import React from 'react';\n\nexport default function Home() {\n  return (\n    <div>\n      <h1>Hi friend,Welcome to your phonebook!</h1>\n    </div>\n  );\n}\n"],"names":["Home"],"sourceRoot":""}
