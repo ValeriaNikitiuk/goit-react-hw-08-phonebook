@@ -1,4 +1,4 @@
-import { addFilter } from 'redux/filterSlice';
+import { addFilter } from 'redux/Contacts/filterSlice';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import s from './Filter.module.css';
