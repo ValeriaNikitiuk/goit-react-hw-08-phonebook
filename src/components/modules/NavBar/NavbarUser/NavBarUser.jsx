@@ -1,8 +1,7 @@
-import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/auth-operations';
 import { useAuth } from '../../../shared/hooks/useAuth';
-import s from './NavBar.module.css';
+// import s from './NavBar.module.css';
 
 const NavBarUser = () => {
   const dispatch = useDispatch();
