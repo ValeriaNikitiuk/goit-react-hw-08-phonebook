@@ -13,7 +13,8 @@ const NavBarUser = () => {
         Hello dear {user.name}
         <img
           className={s.svg}
-           src="https://svgsilh.com/svg/24037-e91e63.svg"
+          src="https://svgsilh.com/svg/24037-e91e63.svg"
+          alt="heart"
           width="20px"
         />
       </h2>
