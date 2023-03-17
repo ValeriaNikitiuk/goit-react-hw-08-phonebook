@@ -15,11 +15,10 @@ const initialState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {},
-  builder: (builder) => {
+  extraReducers: (builder) => {
     //REGISTeR
     builder
-      .addCase(register.fulfilled, (state, action) => {
+      .addCase(register.fulfilled, (state, action) => {        
         state.user = action.payload.user;
         state.token = action.payload.token;
         state.isLoggedIn = true;
@@ -35,7 +34,7 @@ const authSlice = createSlice({
     
     //LOGOUT
     builder
-      .addCase(logOut.fulfilled, (state) => {
+      .addCase(logOut.fulfilled, (state) => {        
         state.user = { name: null, email: null };
         state.token = null;
         state.isLoggedIn = false;

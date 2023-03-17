@@ -13,7 +13,7 @@ const Filter = () => {
 
   return (
     <div>
-      <p>Find contacts by name</p>
+      <p className={s.text}>Find contacts by name:</p>
       <input
         className={s.input}
         type="text"

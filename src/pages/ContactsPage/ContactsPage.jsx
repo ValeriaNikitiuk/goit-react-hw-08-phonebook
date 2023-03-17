@@ -3,6 +3,7 @@ import Filter from '../../components/modules/Contacts/Filter/Filter';
 import ContactsList from '../../components/modules/Contacts/ContactList/ContactList';
 import { selectIsLoading, selectError } from '../../redux/Contacts/selectors';
 import { useSelector } from 'react-redux';
+import s from './ContactsPage.module.css';
 
 const ContactPage = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -10,7 +11,7 @@ const ContactPage = () => {
   return (
     <main>
       <div>
-        <h1>Phonebook</h1>
+        <h1 className={s.text}>Phonebook</h1>
         <ContactForm />
         <Filter />
         {isLoading && !error && `...Loading`}

@@ -69,7 +69,7 @@ const ContactForm = () => {
           onChange={handleInputChange}
         />
       </label>
-      <button className={s.button} type="submit" disabled={loading}>
+      <button className={s.btn} type="submit" disabled={loading}>
         Add contact
       </button>
     </form>

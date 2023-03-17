@@ -1,0 +1,58 @@
+.container{
+background: #fff;
+border-radius: 45px;
+    background: rgba(15 15 15 / 72%);
+    box-shadow: 3px 3px 80px #fff;
+ 
+    overflow: hidden;
+    width: 768px;
+    height: 100%;
+    max-width: 100%;
+    max-height: 1100px; /* максимальная высота элемента */
+  overflow-y: auto;
+    
+}
+
+.homeContainer{
+    margin-top: 46px;
+}
+
+.home{
+    text-decoration: none;
+    color: rgb(255, 255, 221);
+   font-size: 27px;
+}
+
+.home_active {
+    color: black;
+}
+    .navbar {
+        display: flex;
+       justify-content: space-around;
+    }
+
+    .text{
+        color: antiquewhite;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        font-weight: 200;
+        text-align: center;
+    }
+
+   
+
+    .icons{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+   
+    }
+
+          .link {
+              color: bisque;
+              text-decoration: none;
+              font-size: 20px;
+                box-shadow: 3px 3px 80px #fff;
+          }
+
+          

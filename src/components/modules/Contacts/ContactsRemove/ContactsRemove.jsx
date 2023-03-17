@@ -13,7 +13,7 @@ export const ContactsRemove = ({ name, number, id }) => {
       <h3>
         {name}: {number}
       </h3>
-      <button className={s.listButton} type="button" onClick={hendleDelete}>
+      <button className={s.btn} type="button" onClick={hendleDelete}>
         Delete
       </button>
     </>

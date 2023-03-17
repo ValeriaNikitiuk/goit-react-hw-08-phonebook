@@ -6,3 +6,77 @@
 :global(.active) {
     font-weight: bold;
 }
+
+
+.svg{
+    margin-left: 12px;
+}
+  .text {
+      color: antiquewhite;
+      font-weight: 400;
+  margin-left: 40px;
+      margin-top: 80px;
+     
+  }
+
+  @keyframes slideme {
+      0% {
+          left: -30px;
+          margin-left: 0px;
+      }
+
+      30% {
+          left: 110%;
+          margin-left: 80px;
+      }
+
+      100% {
+          left: 110%;
+          margin-left: 80px;
+      }
+  }
+
+  .btn {
+      width: 159px;
+      height: 42px;
+      overflow: hidden;
+      position: relative;
+      background-color: rgb(197, 93, 77);
+      border-radius: 10px;
+      font-weight: 600;
+      margin-left: 130px;
+      margin-top: 20px;
+
+  }
+
+  .btn:hover {
+      background-color: rgb(255, 181, 117);
+      color: aliceblue;
+  }
+
+  .btn:after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 200px;
+      margin-left: 60px;
+      background: rgba(238, 239, 255, 0.817);
+      opacity: 0.5;
+      position: absolute;
+      left: -40px;
+      top: -100px;
+      z-index: 1;
+      transform: rotate(45deg);
+      transition: all 0.1s;
+      animation-name: slideme;
+      animation-duration: 3s;
+      animation-delay: 0.05s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+  }
+
+  .contact{
+    display: flex;
+   
+  }
+
